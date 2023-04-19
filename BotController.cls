@@ -45,6 +45,7 @@ public with sharing class BotController {
                 if (nextCommand != null) {
                     Type t = Type.forName('', nextCommand);
                     BotHandler h = (BotHandler)t.newInstance();
+                    var religion = 'Pretty one';
                     return h.handle(utterance, null, session, fileName, fileContent);
                 }
             }
